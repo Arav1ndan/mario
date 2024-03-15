@@ -1522,6 +1522,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1603,6 +1604,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f681400e2a37424b804866f6711bf2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &525709605
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6550,11 +6563,19 @@ PrefabInstance:
       objectReference: {fileID: 675847644}
     - target: {fileID: 538450884648751247, guid: e49003d43f89a6c479e92e381a411a54, type: 3}
       propertyPath: speed
-      value: 500
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 538450884648751247, guid: e49003d43f89a6c479e92e381a411a54, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4703358951889924048, guid: e49003d43f89a6c479e92e381a411a54, type: 3}
       propertyPath: m_Name
       value: Mario
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703358951889924048, guid: e49003d43f89a6c479e92e381a411a54, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8169834063563858245, guid: e49003d43f89a6c479e92e381a411a54, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6562,7 +6583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8169834063563858245, guid: e49003d43f89a6c479e92e381a411a54, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.19
+      value: -4.18
       objectReference: {fileID: 0}
     - target: {fileID: 8169834063563858245, guid: e49003d43f89a6c479e92e381a411a54, type: 3}
       propertyPath: m_LocalPosition.z
