@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8950102210993661235}
   - component: {fileID: 8361424200747859663}
   - component: {fileID: 538450884648751247}
-  m_Layer: 0
+  - component: {fileID: 2085826346181106764}
+  m_Layer: 3
   m_Name: Mario
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,16 +53,16 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 76a2fc19b79f74c4481423d0daa47d3f, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &8361424200747859663
 CapsuleCollider2D:
@@ -72,7 +73,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 4703358951889924048}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 76a2fc19b79f74c4481423d0daa47d3f, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -96,7 +97,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.3, y: 0.3}
+  m_Size: {x: 0.23, y: 0.3}
   m_Direction: 0
 --- !u!114 &538450884648751247
 MonoBehaviour:
@@ -110,8 +111,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65fd3f7de1939ef40ac5263f09ada70a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  rb: {fileID: 8950102210993661235}
   speed: 5
+  maxJumpHeight: 1.5
+  maxJumpTime: 1
+--- !u!114 &2085826346181106764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4703358951889924048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 2dfe88cce2df6cc4a8034dfc046d98b3, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 538450884648751247}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4281f80a-5ff6-449b-8f76-94492f50edc7
+    m_ActionName: Player/Move[/Keyboard/a,/Keyboard/d,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7bd235bc-1201-4109-a0c6-a29b318e8520
+    m_ActionName: Player/Jump[/Keyboard/space]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &5792282713258259393
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +175,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8134258917944793411}
   - component: {fileID: 4725448662892884877}
-  m_Layer: 0
+  - component: {fileID: 4194240712872823743}
+  m_Layer: 3
   m_Name: big
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,6 +250,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4194240712872823743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5792282713258259393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fec289ee9beb29a4da2e6340a7fb0a05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 21300000, guid: 91677e6faadefbc499e6d9a3e60e97ba, type: 3}
+  Jump: {fileID: 21300000, guid: 52ba3a63607dca14681272b0da00ffdd, type: 3}
+  Slide: {fileID: 21300000, guid: 880ae31f7d97d0c41839d092168b830f, type: 3}
+  Run: {fileID: 21300000, guid: e3753df15b831b24ea5fbda651c33b7b, type: 3}
 --- !u!1 &5817060338948923415
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,7 +276,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6726163670238525210}
   - component: {fileID: 3152587409803698236}
-  m_Layer: 0
+  - component: {fileID: 11335850808553987}
+  m_Layer: 3
   m_Name: small
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,3 +351,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &11335850808553987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5817060338948923415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fec289ee9beb29a4da2e6340a7fb0a05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 21300000, guid: fe8ba6e51aa04624aa004f4ba1ac13ad, type: 3}
+  Jump: {fileID: 21300000, guid: eb6d97c6c0dfbe641865be52eb3ac9d7, type: 3}
+  Slide: {fileID: 21300000, guid: cd91d472d0a4a3f4c9ce55771fd43806, type: 3}
+  Run: {fileID: 21300000, guid: bcc07cd16bfa2724f834a383b173d8bf, type: 3}
