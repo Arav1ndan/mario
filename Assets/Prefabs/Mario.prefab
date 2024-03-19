@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8361424200747859663}
   - component: {fileID: 538450884648751247}
   - component: {fileID: 2085826346181106764}
+  - component: {fileID: 521326685173642771}
+  - component: {fileID: 7780802509455645303}
   m_Layer: 3
   m_Name: Mario
   m_TagString: Player
@@ -165,6 +167,34 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &521326685173642771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4703358951889924048}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01928feca45dcf3449199603c11c3c9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 3152587409803698236}
+  deadSprite: {fileID: 21300000, guid: e6c4e7c0c88f65044a1a73b0a1340415, type: 3}
+--- !u!114 &7780802509455645303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4703358951889924048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce6584e20cefca4f801ac70dfb8d82e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smallRender: {fileID: 11335850808553987}
+  bigRender: {fileID: 4194240712872823743}
 --- !u!1 &5792282713258259393
 GameObject:
   m_ObjectHideFlags: 0
