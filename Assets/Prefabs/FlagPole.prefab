@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &562225811183934207
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 575858807783791173}
+  m_Layer: 0
+  m_Name: Bottom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &575858807783791173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562225811183934207}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.185, y: 0.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1266871748177980867}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1448029957784290982
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,7 +125,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1266871748177980867}
   - component: {fileID: 3475302167870616352}
-  m_Layer: 0
+  - component: {fileID: 33562890798899871}
+  m_Layer: 2
   m_Name: FlagPole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,6 +149,7 @@ Transform:
   - {fileID: 9151588177352187782}
   - {fileID: 7941593714464396036}
   - {fileID: 8398664373266161151}
+  - {fileID: 575858807783791173}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &3475302167870616352
@@ -164,6 +197,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 3.42}
   m_EdgeRadius: 0
+--- !u!114 &33562890798899871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2568073198697170433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 151d1eaeb2f7cbf44810dbf5e3262fd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flag: {fileID: 7941593714464396036}
+  poleBottom: {fileID: 575858807783791173}
+  castle: {fileID: 0}
+  speed: 4
+  nextWorld: 1
+  nextStage: 1
 --- !u!1 &2710114491843672095
 GameObject:
   m_ObjectHideFlags: 0
